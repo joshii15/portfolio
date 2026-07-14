@@ -1,5 +1,4 @@
-/* General Settings */
-
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,15 +6,14 @@
     scroll-behavior: smooth;
 }
 
+/* Main Font */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f7ff;
-    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f4ff;
+    color: #222;
 }
 
-
-/* Navigation Bar */
-
+/* Navigation */
 header {
     background-color: #ffffff;
     position: sticky;
@@ -35,8 +33,9 @@ header {
 }
 
 .logo {
-    color: #6c4ccf;
+    color: #4b3299;
     font-size: 26px;
+    font-weight: bold;
 }
 
 .nav-links {
@@ -47,7 +46,7 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: #222;
     font-weight: bold;
 }
 
@@ -55,9 +54,7 @@ header {
     color: #6c4ccf;
 }
 
-
-/* Home */
-
+/* HOME */
 .home {
     min-height: 90vh;
 
@@ -67,11 +64,15 @@ header {
 
     text-align: center;
 
-    background: linear-gradient(135deg, #eee9ff, #ffffff);
+    background: linear-gradient(
+        135deg,
+        #eee9ff,
+        #faf9ff
+    );
 }
 
 .home-content {
-    max-width: 700px;
+    max-width: 750px;
     padding: 30px;
 }
 
@@ -79,17 +80,20 @@ header {
     color: #6c4ccf;
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 12px;
 }
 
 .home h1 {
-    font-size: 60px;
-    margin: 10px 0;
+    font-size: 62px;
     color: #4b3299;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .home h2 {
-    font-size: 25px;
-    margin-bottom: 20px;
+    font-size: 26px;
+    color: #222;
+    margin-bottom: 22px;
 }
 
 .home p {
@@ -97,35 +101,31 @@ header {
     line-height: 1.7;
 }
 
-
-/* Button */
-
-.btn,
-.contact button {
+/* BUTTON */
+.btn {
     display: inline-block;
 
-    margin-top: 25px;
-    padding: 12px 25px;
+    margin-top: 26px;
+    padding: 12px 27px;
 
     background-color: #6c4ccf;
     color: white;
 
-    border: none;
     border-radius: 25px;
 
     text-decoration: none;
     font-size: 16px;
-    cursor: pointer;
+    font-weight: 500;
+
+    transition: 0.3s;
 }
 
-.btn:hover,
-.contact button:hover {
+.btn:hover {
     background-color: #4b3299;
+    transform: translateY(-2px);
 }
 
-
-/* Common Sections */
-
+/* SECTIONS */
 .section {
     max-width: 1100px;
     margin: auto;
@@ -139,9 +139,7 @@ header {
     margin-bottom: 30px;
 }
 
-
-/* About */
-
+/* ABOUT */
 .about-box {
     max-width: 800px;
     margin: auto;
@@ -153,9 +151,7 @@ header {
     margin-bottom: 20px;
 }
 
-
-/* Skills */
-
+/* SKILLS */
 .skills-section {
     max-width: 1200px;
 }
@@ -167,14 +163,15 @@ header {
 }
 
 .skill-card {
-    background-color: white;
+    background-color: #ffffff;
+
     padding: 30px 20px;
 
     border-radius: 15px;
 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 
-    transition: transform 0.3s;
+    transition: 0.3s;
 }
 
 .skill-card:hover {
@@ -190,9 +187,7 @@ header {
     line-height: 1.5;
 }
 
-
-/* Goal */
-
+/* GOAL */
 .goal {
     background-color: #eee9ff;
     max-width: none;
@@ -205,12 +200,28 @@ header {
     line-height: 1.8;
 }
 
-
-/* Contact */
-
+/* CONTACT */
 .contact p {
     font-size: 18px;
     margin: 15px;
+}
+
+.contact button {
+    margin-top: 15px;
+    padding: 12px 25px;
+
+    background-color: #6c4ccf;
+    color: white;
+
+    border: none;
+    border-radius: 25px;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #4b3299;
 }
 
 #message {
@@ -218,21 +229,15 @@ header {
     font-weight: bold;
 }
 
-
-/* Footer */
-
+/* FOOTER */
 footer {
     background-color: #29213d;
     color: white;
-
     text-align: center;
-
     padding: 20px;
 }
 
-
-/* Mobile Responsive Design */
-
+/* MOBILE */
 @media (max-width: 768px) {
 
     .navbar {
@@ -245,18 +250,17 @@ footer {
     }
 
     .home h1 {
-        font-size: 45px;
+        font-size: 48px;
     }
 
     .home h2 {
-        font-size: 20px;
+        font-size: 21px;
     }
 
     .skills-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
 
 @media (max-width: 480px) {
 
@@ -271,6 +275,6 @@ footer {
     }
 
     .home h1 {
-        font-size: 38px;
+        font-size: 40px;
     }
 }
